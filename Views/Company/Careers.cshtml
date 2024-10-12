@@ -1,0 +1,492 @@
+@{
+    ViewData["Title"] = "Tuyển dụng";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="icon" href="~/images/logo.jpeg" type="image/jpeg" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/price-range.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <style>
+        .content-container {
+            margin-bottom: 40px;
+        }
+
+        .job-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .job-item .icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .job-details h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .number-of-openings {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .location-icon {
+            margin-right: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        h1 {
+            color: #87C441;
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 10px;
+        }
+
+        h1 br {
+            display: none;
+            /* Xóa dấu xuống dòng khi trên màn hình nhỏ */
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        p:first-of-type {
+            font-size: 1.5rem;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #87C441;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #6a9e31;
+        }
+
+        #footer {
+            background: #F0F0E9;
+        }
+
+
+        .footer-top .container {
+            border-bottom: 1px solid #E0E0DA;
+            padding-bottom: 20px;
+        }
+
+        .companyinfo {
+            margin-top: 57px;
+        }
+
+        .companyinfo h2 {
+            color: #1351ae;
+            font-family: abel;
+            font-size: 27px;
+            text-transform: uppercase;
+        }
+
+        .companyinfo h2 span {
+            color: #14bf5f;
+        }
+
+        .companyinfo p {
+            color: #B3B3AD;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .footer-top .col-sm-3 {
+            overflow: hidden;
+        }
+
+        .video-gallery {
+            margin-top: 57px;
+            position: inherit;
+        }
+
+        .video-gallery a img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .iframe-img {
+            position: relative;
+            display: block;
+            height: 61px;
+            margin-bottom: 10px;
+            border: 2px solid #CCCCC6;
+            border-radius: 3px;
+        }
+
+        .overlay-icon {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 61px;
+            background: #FE980F;
+            border-radius: 3px;
+            color: #FFF;
+            font-size: 20px;
+            line-height: 0;
+            display: block;
+            opacity: 0;
+            -webkit-transition: 300ms;
+            -moz-transition: 300ms;
+            -o-transition: 300ms;
+            transition: 300ms;
+        }
+
+        .overlay-icon i {
+            position: relative;
+            top: 50%;
+            margin-top: -20px;
+        }
+
+        .video-gallery a:hover .overlay-icon {
+            opacity: 1;
+        }
+
+        .video-gallery p {
+            color: #8C8C88;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 0px;
+        }
+
+        .video-gallery h2 {
+            color: #8c8c88;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+
+        .address {
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .address img {
+            width: 100%;
+        }
+
+        .address p {
+            color: #666663;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            left: 25px;
+            position: absolute;
+            top: 50px;
+        }
+
+        .footer-widget {
+            margin-bottom: 68px;
+        }
+
+        .footer-widget .container {
+            border-top: 1px solid #FFFFFF;
+            padding-top: 15px;
+        }
+
+        .single-widget h2 {
+            color: #666663;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+
+        .single-widget h2 i {
+            margin-right: 15px;
+        }
+
+        .single-widget ul li a {
+            color: #8C8C88;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 0;
+        }
+
+        .single-widget ul li a i {
+            margin-right: 18px;
+        }
+
+        .single-widget ul li a:hover {
+            background: none;
+            color: #FE980F;
+        }
+
+        .footer-bottom {
+            background: #D6D6D0;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            color: #363432;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            margin-left: 15px;
+        }
+
+        .footer-bottom p span a {
+            color: #FE980F;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+    <header id="header">
+
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i>0399 151 118</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>cellgroup@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://www.facebook.com/people/Cellmoons-Vietnam/61565188047655/"><i
+                                            class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a asp-controller="Home" asp-action="Index"><img src="~/images/home/logo.jpeg" alt="" /
+                                    width="200px"></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a asp-controller="Home" asp-action="Index" class="active">Trang chủ</a></li>
+                                <li><a asp-controller="Company" asp-action="About">Giới thiệu</a></li>
+                                <li><a asp-controller="Company" asp-action="Careers">Tuyển dụng</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    @* <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                    <input type="text" placeholder="Tìm kiếm" />
+                    </div>
+                    </div> *@
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+    <div class="content-container">
+
+        <a asp-controller="Pharmacist" asp-action="Pharmacist">
+            <div class="job-item">
+                <div class="icon">
+                    <i class="ri-group-fill"></i>
+                </div>
+                <div class="job-details">
+                    <h3>Công ty CP cellgroup tuyển dụng vị trí: Dược sĩ giới thiệu, đào tạo sản phẩm</h3>
+                </div>
+                <div class="number-of-openings">
+                    1
+                </div>
+                <div class="location">
+                    <span class="location-icon">&#128205;</span> TP.Thủ Dầu Một
+                </div>
+            </div>
+        </a>
+
+
+    </div>
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2><span>Cell</span>group</h2>
+                            <p>Rất vui được đồng hành, hợp tác để cùng thực hiện sứ mệnh cao cả với quý đối tác.</p>
+                        </div>
+                    </div>
+                    @* <div class="col-sm-7">
+                    <div class="col-sm-3">
+                    <div class="video-gallery text-center">
+                    <a href="#">
+                    <div class="iframe-img">
+                    <img src="images/home/" alt="tonner" />
+                    </div>
+                    <div class="overlay-icon">
+                    <i class="fa fa-play-circle-o"></i>
+                    </div>
+                    </a>
+
+                    </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                    <div class="video-gallery text-center">
+                    <a href="#">
+                    <div class="iframe-img">
+                    <img src="images/home/" alt="tonner" />
+                    </div>
+                    <div class="overlay-icon">
+                    <i class="fa fa-play-circle-o"></i>
+                    </div>
+                    </a>
+
+                    </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                    <div class="video-gallery text-center">
+                    <a href="#">
+                    <div class="iframe-img">
+                    <img src="images/home/" alt="tonner" />
+                    </div>
+                    <div class="overlay-icon">
+                    <i class="fa fa-play-circle-o"></i>
+                    </div>
+                    </a>
+
+                    </div>
+                    </div> *@
+
+
+                    @* </div> *@
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">© Bản quyền thuộc về cellgroup@gmail.com</p>
+
+                </div>
+            </div>
+        </div>
+
+    </footer><!--/Footer-->
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+    <script src="~/js/price-range.js"></script>
+    <script src="~/js/jquery.prettyPhoto.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+
+</html>

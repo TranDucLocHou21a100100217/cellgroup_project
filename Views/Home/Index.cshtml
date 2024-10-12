@@ -1,0 +1,1012 @@
+﻿@{
+	ViewData["Title"] = "Trang chủ Cellgroup";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title> </title>
+	<link rel="icon" href="~/images/logo.jpeg" type="image/jpeg" />
+	<link href="~/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/css/font-awesome.min.css" rel="stylesheet">
+	<link href="~/css/prettyPhoto.css" rel="stylesheet">
+	<link href="~/css/price-range.css" rel="stylesheet">
+	<link href="~/css/animate.css" rel="stylesheet">
+	<link href="~/css/main.css" rel="stylesheet">
+	<link href="~/css/responsive.css" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	<style>
+		.col-sm-6 .image {
+			height: 420px;
+		}
+
+		.companyinfo h2 {
+			color: #1351ae;
+			font-family: abel;
+			font-size: 27px;
+			text-transform: uppercase;
+		}
+
+		.companyinfo h2 span {
+			color: #48cc81;
+		}
+	</style>
+</head><!--/head-->
+
+<body>
+	<header id="header">
+
+		<!--header-->
+		<div class="header_top">
+			<!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i>0877 668 118</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i>cellgroup@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="https://www.facebook.com/people/Cellmoons-Vietnam/61565188047655/"><i
+											class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+
+		<div class="header-middle">
+			<!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+
+							<a asp-controller="Home" asp-action="Index"><img src="~/images/home/logo.jpeg" alt="" /
+									width="200px"></a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div><!--/header-middle-->
+
+		<div class="header-bottom">
+			<!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a asp-controller="Home" asp-action="Index" class="active">Trang chủ</a></li>
+								<li><a asp-controller="Company" asp-action="About">Giới thiệu</a></li>
+								<li><a asp-controller="Company" asp-action="Careers">Tuyển dụng</a></li>
+
+
+
+
+							</ul>
+						</div>
+					</div>
+					@* <div class="col-sm-3">
+					<div class="search_box pull-right">
+					<input type="text" placeholder="Tìm kiếm" />
+					</div>
+					</div> *@
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+	<section id="slider">
+		<!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+
+									<h2>CellMoon's VietNam rất hân hạnh giới thiệu bản concept thiết kế của sản phẩm
+										Toner mới</h2>
+									<p>
+										Với sứ mệnh mang đến cho khách hàng những sản phẩm chăm sóc da cao cấp và an
+										toàn, mà giá cả lại bình dân,toner của CellMoon's VietNam hứa hẹn sẽ là một sản
+										phẩm chất lượng đáng để chờ đợi .
+
+									</p>
+									<button type="button" class="btn btn-default get" onclick="window.location.href='https://www.facebook.com/share/p/vCaR5MrMW4eH4efg/';">Xem thêm</button>
+
+
+								</div>
+								<div class="col-sm-6">
+									<img src="~/images/home/toner_01.jpg" class="girl img-responsive image"
+										height="420px" alt="" />
+
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+
+									<h2>Chào mừng kỷ niệm 70 năm Ngày Giải Phóng Thủ Đô (10/10/1954 - 10/10/2024)</h2>
+									<p>
+										Hà Nội – Trái tim yêu thương của cả nước, mảnh đất thiêng liêng nơi hội tụ hồn
+										thiêng sông núi. Hôm nay, chúng ta cùng nhau ôn lại trang sử hào hùng, tự hào
+										tưởng nhớ ngày 10/10/1954 - ngày mà Thủ đô Hà Nội chính thức sạch bóng quân thù,
+										mở ra một kỷ nguyên mới của độc lập, tự do, và hòa bình cho dân tộc.
+									</p>
+									<button type="button" class="btn btn-default get"
+										onclick="window.location.href='https://www.facebook.com/share/p/EWUSsjmqUs27VscA/';">Xem
+										thêm</button>
+
+								</div>
+								<div class="col-sm-6">
+									<img src="~/images/home/toner_giaiphongthudo.jpg" class="girl img-responsive" alt=""
+										/ width="340px">
+
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="col-sm-6">
+
+									<h2>SIÊU PHẨM TẨY TRANG SẮP RA MẮT - BÍ QUYẾT ĐỂ LÀN DA SẠCH SÂU & KHỎE ĐẸP</h2>
+									<p>
+										CellMoon's VietNam tự hào sắp ra mắt sản phẩm Tẩy Trang hoàn toàn mới, được
+										nghiên cứu để làm sạch sâu và bảo vệ làn da khỏi các tác nhân gây hại, giúp da
+										luôn tươi sáng và khỏe mạnh.
+									</p>
+									<button type="button" class="btn btn-default get"
+										onclick="window.location.href='https://www.facebook.com/share/p/vXsY5bfWRxkn1yps/';">Xem
+										thêm</button>
+
+								</div>
+								<div class="col-sm-6">
+									<img src="~/images/home/toner_03.jpg" class="girl img-responsive" alt="" /
+										width="340px">
+
+								</div>
+							</div>
+
+						</div>
+
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+
+	@* <section>
+	<div class="container"> *@
+	@* <div class="row">
+	<div class="col-sm-3">
+	<div class="left-sidebar"> *@
+	@* <h2>Menu</h2>
+	<div class="panel-group category-products" id="accordian">
+	<!--category-productsr-->
+	<div class="panel panel-default">
+	<div class="panel-heading">
+	<h4 class="panel-title">
+	<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+	<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+	Sửa rửa mặt
+	</a>
+	</h4>
+	</div> *@
+	@* <div id="sportswear" class="panel-collapse collapse">
+	<div class="panel-body">
+	<ul>
+	<li><a href="#">Nước Giặt COMMON 10KG </a></li>
+	<li><a href="#">Nước giặt xả OKULA + Bikini – Kids 1L </a></li>
+	<li><a href="#">Nước Giặt Xả OKULA Hương Nước Hoa 1 KG</a></li>
+	<li><a href="#">Nước Giặt Xả OKULA Hương Dịu Êm 1 KG</a></li>
+	<li><a href="#">Nước Giặt Xả OKULA Hương Nước Hoa 10 KG </a></li>
+	</ul>
+	</div>
+	</div> *@
+	@* </div>
+	<div class="panel panel-default">
+	<div class="panel-heading">
+	<h4 class="panel-title">
+	<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+	<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+	Tonner
+	</a>
+	</h4>
+	</div> *@
+	@* <div id="mens" class="panel-collapse collapse">
+	<div class="panel-body">
+	<ul>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Quế 750gr</a></li>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Trà Xanh 400gr</a></li>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Quế 400gr</a></li>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Quế 10kg</a></li>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Quế 3,6kg</a></li>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Chanh Sả 10 kg</a></li>
+	<li><a href="#">Nước Rửa Chén OKULA Hương Trà Xanh 3.6 kg</a></li>
+	</ul>
+	</div>
+	</div> *@
+	@* </div>
+
+	<div class="panel panel-default">
+	<div class="panel-heading">
+	<h4 class="panel-title">
+	<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+	<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+	Nước tẩy trang
+	</a>
+	</h4>
+	</div> *@
+	@* <div id="womens" class="panel-collapse collapse">
+	<div class="panel-body">
+	<ul>
+	<li><a href="#">Nước Lau Sàn OKULA Hương Trà Xanh 10kg</a></li>
+	<li><a href="#">Nước Lau Sàn OKULA Hương Quế 3.6kg</a></li>
+	<li><a href="#">Nước Lau Sàn OKULA Hương Chanh Sả 950gram</a></li>
+	<li><a href="#">Nước Lau Sàn OKULA Hương Hoa Nhài 3.6kg</a></li>
+	<li><a href="#">Nước Lau Sàn OKULA Hương Quế 10kg</a></li>
+	</ul>
+	</div>
+	</div> *@
+	@* </div>
+	<div class="panel panel-default">
+	<div class="panel-heading">
+	<h4 class="panel-title"><a href="#"></a></h4>
+	<h4 class="panel-title"><a asp-controller="Product" asp-action="Index">Mặt nạ</a>
+	</h4>
+	</div>
+	</div> *@
+	@* <div class="panel panel-default">
+	<div class="panel-heading">
+	<h4 class="panel-title"><a href="#">Dòng sản phẩm Dược liệu</a></h4>
+	</div>
+	</div>
+	<div class="panel panel-default">
+	<div class="panel-heading">
+	<h4 class="panel-title"><a href="#">Dòng sản phẩm Enzyme Cao Cấp</a></h4>
+	</div>
+	</div> *@
+
+	@* </div><!--/category-products--> *@
+
+
+
+	@* <div class="price-range">
+	<!--price-range-->
+	<h2>Khoảng giá</h2>
+	<div class="well text-center">
+	<input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600000"
+	data-slider-step="5" data-slider-value="[250000,450000]" id="sl2"><br />
+	<b class="pull-left">vnd 0</b> <b class="pull-right"> 600000 vnd</b>
+	</div>
+	</div><!--/price-range--> *@
+
+	@* <div class="shipping text-center">
+	<!--shipping-->
+	<img src="images/home/Nuoc-rua-chen-0kula-600g.png" alt="" / height="330px">
+	</div><!--/shipping--> *@
+
+	@* </div>
+	</div> *@
+
+	@* <div class="col-sm-9 padding-right">
+	<div class="features_items">
+	<!--features_items-->
+	<h2 class="title text-center">SẢN PHẨM NỔI BẬT</h2>
+	<div class="col-sm-4">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước-giặt-okula-common.png" alt="" />
+	<h2>$360.000vnd</h2>
+	<p>Nước Giặt COMMON 10KG</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i> Nhận tư vấn
+	</a>
+	</div>
+	<div class="product-overlay">
+	<div class="overlay-content">
+	<h2>$360.000vnd</h2>
+	<p>Nước Giặt COMMON 10KG</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	</div>
+	</div> *@
+	<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Yêu thích</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>So sánh</a></li>
+									</ul>
+								</div> -->
+	@* </div>
+	</div>
+
+	<div class="col-sm-4">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Lau Sàn OKULA Hương Trà Xanh 10kg.png" alt="" />
+	<h2>208.300vnđ</h2>
+	<p>Nước Lau Sàn Hương Trà Xanh 10kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	<div class="product-overlay">
+	<div class="overlay-content">
+	<h2>208.300vnđ</h2>
+	<p>Nước Lau Sàn Hương Trà Xanh 10kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	</div>
+	</div> *@
+	<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Yêu thích</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>So sánh</a></li>
+									</ul>
+								</div> -->
+	@* </div>
+	</div>
+	<div class="col-sm-4">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Rửa Chén OKULA Hương Trà Xanh 400gr.png" alt="" />
+	<h2>22.000vnd</h2>
+	<p>Nước Rửa Chén Hương Trà Xanh 400gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	<div class="product-overlay">
+	<div class="overlay-content">
+	<h2>22.000vnd</h2>
+	<p>Nước Rửa Chén Hương Trà Xanh 400gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	</div>
+	<img src="images/home/new.png" class="new" alt="" />
+	</div>
+	Nhận tư vấn
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Rửa Chén OKULA Hương Quế 750gr.png" alt="" />
+	<h2>35.000vnd</h2>
+	<p>Nước Rửa Chén Hương Quế 750gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	<div class="product-overlay">
+	<div class="overlay-content">
+	<h2>35.000vnd</h2>
+	<p>Nước Rửa Chén Hương Quế 750gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	</div>
+	</div> *@
+	<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Yêu thích</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>So sánh</a></li>
+									</ul>
+								</div> -->
+	@* </div>
+	</div>
+	<div class="col-sm-4">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Rửa Chén OKULA Hương Quế 10kg.png" alt="" />
+	<h2>240.000vnd</h2>
+	<p>Nước Rửa Chén Hương Quế 10kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	<div class="product-overlay">
+	<div class="overlay-content">
+	<h2>240.000vnd</h2>
+	<p>Nước Rửa Chén Hương Quế 10kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+	</div>
+	</div> *@
+	<!-- <div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Yêu thích</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>So sánh</a></li>
+									</ul>
+								</div> -->
+	@* </div>
+	</div> *@
+
+
+	@* </div><!--features_items-->
+
+	<div class="category-tab">
+	<!--category-tab-->
+	<div class="col-sm-12">
+	<ul class="nav nav-tabs">
+	<li class="active"><a href="#giatxa" data-toggle="tab">Sửa rửa mặt</a></li>
+	<li><a href="#ruachen" data-toggle="tab">Tonner</a></li>
+	<li><a href="#lausan" data-toggle="tab">Sữa rửa mặt</a></li>
+	<li><a href="#enzyme" data-toggle="tab">Mặt nạ</a></li>
+	<!-- <li><a href="#duoclieu" data-toggle="tab">Sản phẩm Dược liệu</a></li> -->
+	</ul>
+	</div>
+	<div class="tab-content">
+	<div class="tab-pane fade active in" id="giatxa">
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước-giặt-okula-common.png" alt="" />
+	<h2>360.000đ</h2>
+	<p>Nước Giặt Okula COMMON 10KG</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nuoc-giat-1kg-Nuoc-Hoa.jpg" alt="" />
+	<h2>69.000đ</h2>
+	<p>Nước Giặt Xả Hương Nước Hoa 1 KG</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nuoc-giat-1kg-Diu-Em.jpg" alt="" />
+	<h2>69.000đ</h2>
+	<p>Nước Giặt Xả Hương Dịu Êm 1 KG</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/gx-nuoc-hoa-3.6.png" alt="" />
+	<h2>503.000đ</h2>
+	<p>Nước Giặt Xả Hương Nước Hoa 10 KG</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="tab-pane fade" id="ruachen">
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Rửa Chén OKULA Hương Quế 750gr.png" alt="" />
+	<h2>35.000đ</h2>
+	<p>Nước Rửa Chén Hương Quế 750gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Rửa Chén OKULA Hương Trà Xanh 400gr.png"
+	alt="" />
+	<h2>22.000đ</h2>
+	<p>Nước Rửa Chén Hương Trà Xanh 400gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nước Lau Sàn OKULA Hương Trà Xanh 10kg.png"
+	alt="" />
+	<h2>130.000đ</h2>
+	<p>
+	Nước Rửa Chén OKULA Hương Chanh Sả 3.6 kg
+	</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/nrc-huong-chanh-sa.png" alt="" />
+	<h2>35.000đ</h2>
+	<p>Nước Rửa Chén OKULA Hương Chanh Sả 750gr</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="tab-pane fade" id="lausan">
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nuoc-lau-san-10kg.png" alt="" />
+	<h2>208.300đ</h2>
+	<p>Nước Lau Sàn OKULA Hương Trà Xanh 10kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/nuoc-lau-san-huong-que-3.6.jpg" alt="" />
+	<h2>85.000đ</h2>
+	<p>Nước Lau Sàn OKULA Hương Quế 3.6kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/nls-huong-chanh-sa.png" alt="" />
+	<h2>35.000đ</h2>
+	<p>Nước Lau Sàn OKULA Hương Chanh Sả 950gram</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/nls-huong-hoa-nhai-3.6.png" alt="" />
+	<h2>85.000đ</h2>
+	<p>Nước Lau Sàn OKULA Hương Hoa Nhài 3.6kg</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="tab-pane fade" id="enzyme">
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Mockup-nuoc-rua-rau-cu-qua-truoc.png" alt="" />
+	<h2>186.000đ</h2>
+	<p>Rửa Rau Củ Quả Sinh Học Okula 1L</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	<div class="col-sm-3">
+	<div class="product-image-wrapper">
+	<div class="single-products">
+	<div class="productinfo text-center">
+	<img src="images/home/Nuoc-giat-Kids-truoc1.png" alt="" />
+	<h2>168.000đ</h2>
+	<p>Nước giặt xả OKULA + Bikini – Kids 1L</p>
+	<a href="#" class="btn btn-default add-to-cart">
+	<i class="fa fa-shopping-cart"></i>Nhận tư vấn
+	</a>
+	</div>
+
+	</div>
+	</div>
+	</div> *@
+	<!-- <div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/gallery3.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i
+														class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/gallery4.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i
+														class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+
+										</div>
+									</div>
+								</div> -->
+	@* </div> *@
+
+	<!-- <div class="tab-pane fade" id="duoclieu">
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/Dầu-gội-500ml.png" alt="" height="240px" />
+												<h2>330.000đ</h2>
+												<p>Dầu Gội Thảo Dược 500ml</p>
+												<a href="#" class="btn btn-default add-to-cart"><i
+														class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/gallery4.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i
+														class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/gallery3.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i
+														class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/home/gallery1.jpg" alt="" />
+												<h2>$56</h2>
+												<p>Easy Polo Black Edition</p>
+												<a href="#" class="btn btn-default add-to-cart"><i
+														class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div> -->
+	@* </div>
+	</div><!--/category-tab--> *@
+	<!-- <div class="recommended_items"><!--recommended_items-->
+	<!-- <h2 class="title text-center">recommended items</h2>
+
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend1.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i
+															class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend2.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i
+															class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend3.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i
+															class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend1.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i
+															class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend2.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i
+															class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend3.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i
+															class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="left recommended-item-control" href="#recommended-item-carousel"
+								data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a class="right recommended-item-control" href="#recommended-item-carousel"
+								data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+					</div> -->
+	<!-- /recommended_items -->
+
+	@* </div> *@
+	@* </div>
+	</div>
+	</section> *@
+
+	<footer id="footer">
+		<!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>Cell</span>group</h2>
+							<p>Rất vui được đồng hành, hợp tác để cùng thực hiện sứ mệnh cao cả với quý đối tác.</p>
+						</div>
+					</div>
+					@* <div class="col-sm-7">
+					<div class="col-sm-3">
+					<div class="video-gallery text-center">
+					<a href="#">
+					<div class="iframe-img">
+					<img src="images/home/" alt="tonner" />
+					</div>
+					<div class="overlay-icon">
+					<i class="fa fa-play-circle-o"></i>
+					</div>
+					</a>
+
+					</div>
+					</div>
+
+					<div class="col-sm-3">
+					<div class="video-gallery text-center">
+					<a href="#">
+					<div class="iframe-img">
+					<img src="images/home/" alt="tonner" />
+					</div>
+					<div class="overlay-icon">
+					<i class="fa fa-play-circle-o"></i>
+					</div>
+					</a>
+
+					</div>
+					</div>
+
+					<div class="col-sm-3">
+					<div class="video-gallery text-center">
+					<a href="#">
+					<div class="iframe-img">
+					<img src="images/home/" alt="tonner" />
+					</div>
+					<div class="overlay-icon">
+					<i class="fa fa-play-circle-o"></i>
+					</div>
+					</a>
+
+					</div>
+					</div>
+
+
+					</div> *@
+
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">© Bản quyền thuộc về cellgroup@gmail.com</p>
+
+				</div>
+			</div>
+		</div>
+
+	</footer><!--/Footer-->
+
+
+
+	<script src="~/js/jquery.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/jquery.scrollUp.min.js"></script>
+	<script src="~/js/price-range.js"></script>
+	<script src="~/js/jquery.prettyPhoto.js"></script>
+	<script src="~/js/main.js"></script>
+</body>
+
+</html>

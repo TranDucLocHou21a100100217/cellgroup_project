@@ -1,0 +1,637 @@
+@{
+    ViewData["Title"] = "Giới thiệu về công ty";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> </title>
+    <link rel="icon" href="~/images/logo.jpeg" type="image/jpeg" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/price-range.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+
+    <style>
+        .content-container {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .thu-ngo-container p {
+            margin: 0 32px 0 32px;
+            min-height: 12px;
+            max-width: 1144px;
+        }
+
+        .letter {
+            margin-bottom: 40px;
+
+            width: auto;
+            /* Hoặc có thể không cần thiết lập */
+            max-width: 100%%;
+            /* Giúp không bị tràn ra ngoài */
+
+        }
+
+        .letter h1 {
+            color: #87C441;
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 10px;
+        }
+
+        .letter p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        p:first-of-type {
+            font-size: 20px;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #87C441;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #6a9e31;
+        }
+
+        .quote-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(173, 220, 246);
+            padding: 40px;
+            color: #444444;
+        }
+
+        /* Phần nội dung văn bản */
+        .quote-content {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .quote-text .quote-mark {
+            font-size: 80px;
+            line-height: 0.5;
+        }
+
+        .quote-message {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Phần hình ảnh */
+        .quote-image img {
+            width: 350px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /*giá trị cốt lõi*/
+        .core-values-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 40px;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .text-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 600;
+            flex-direction: column;
+        }
+
+        .values-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .value-item {
+            border-bottom: 1px solid #666663;
+        }
+
+        .value-item h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .value-item p {
+            font-size: 16px;
+            color: #67686a;
+            font-weight: 300;
+        }
+
+        /* Phần hình ảnh */
+        .image-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-content img {
+            width: 350px;
+            height: auto;
+        }
+
+        #footer {
+            background: #F0F0E9;
+        }
+
+
+        .footer-top .container {
+            border-bottom: 1px solid #E0E0DA;
+            padding-bottom: 20px;
+        }
+
+        .companyinfo {
+            margin-top: 57px;
+        }
+
+        .companyinfo h2 {
+            color: #1351ae;
+            font-family: abel;
+            font-size: 27px;
+            text-transform: uppercase;
+        }
+
+        .companyinfo h2 span {
+            color: #14bf5f;
+        }
+
+        .companyinfo p {
+            color: #B3B3AD;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .footer-top .col-sm-3 {
+            overflow: hidden;
+        }
+
+        .video-gallery {
+            margin-top: 57px;
+            position: inherit;
+        }
+
+        .video-gallery a img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .iframe-img {
+            position: relative;
+            display: block;
+            height: 61px;
+            margin-bottom: 10px;
+            border: 2px solid #CCCCC6;
+            border-radius: 3px;
+        }
+
+        .overlay-icon {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 61px;
+            background: #FE980F;
+            border-radius: 3px;
+            color: #FFF;
+            font-size: 20px;
+            line-height: 0;
+            display: block;
+            opacity: 0;
+            -webkit-transition: 300ms;
+            -moz-transition: 300ms;
+            -o-transition: 300ms;
+            transition: 300ms;
+        }
+
+        .overlay-icon i {
+            position: relative;
+            top: 50%;
+            margin-top: -20px;
+        }
+
+        .video-gallery a:hover .overlay-icon {
+            opacity: 1;
+        }
+
+        .video-gallery p {
+            color: #8C8C88;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 0px;
+        }
+
+        .video-gallery h2 {
+            color: #8c8c88;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+
+
+        .address {
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .address img {
+            width: 100%;
+        }
+
+        .address p {
+            color: #666663;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            left: 25px;
+            position: absolute;
+            top: 50px;
+        }
+
+        .footer-widget {
+            margin-bottom: 68px;
+        }
+
+        .footer-widget .container {
+            border-top: 1px solid #FFFFFF;
+            padding-top: 15px;
+        }
+
+        .single-widget h2 {
+            color: #666663;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+
+        .single-widget h2 i {
+            margin-right: 15px;
+        }
+
+        .single-widget ul li a {
+            color: #8C8C88;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 0;
+        }
+
+        .single-widget ul li a i {
+            margin-right: 18px;
+        }
+
+        .single-widget ul li a:hover {
+            background: none;
+            color: #FE980F;
+        }
+
+        .footer-bottom {
+            background: #D6D6D0;
+            padding-top: 10px;
+        }
+
+        .footer-bottom p {
+            color: #363432;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            margin-left: 15px;
+        }
+
+        .footer-bottom p span a {
+            color: #FE980F;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+    <header id="header">
+
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i>0399 151 118</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>cellgroup@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://www.facebook.com/people/Cellmoons-Vietnam/61565188047655/"><i
+                                            class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a asp-controller="Home" asp-action="Index"><img src="~/images/home/logo.jpeg" alt="" /
+                                    width="200px"></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a asp-controller="Home" asp-action="Index" class="active">Trang chủ</a></li>
+                                <li><a asp-controller="Company" asp-action="About">Giới thiệu</a></li>
+                                <li><a asp-controller="Company" asp-action="Careers">Tuyển dụng</a></li>
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    @* <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                    <input type="text" placeholder="Tìm kiếm" />
+                    </div>
+                    </div> *@
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+    <div class="content-container">
+        <div class="thu-ngo-container"
+            style="background-color: rgb(173, 220, 246); padding: 20px; border-radius: 10px; font-family: Arial, sans-serif; color: #333; margin-bottom: 40px;">
+            <h2 style="text-align: center;">THƯ NGỎ</h2>
+            <p><strong>Kính gửi:</strong> Quý Đối Tác, Quý Khách Hàng</p>
+
+            <p>Lời đầu tiên, Công ty CP Tập đoàn CellGroup (“Tập đoàn Cellgroup”) xin gửi đến Quý Đối tác, Quý Khách
+                hàng lời chào trân trọng và lời cảm ơn chân thành vì đã Tin tưởng Lựa chọn, Ủng hộ và Đồng hành cùng Tập
+                đoàn Cellgroup trên chặng đường phấn đấu vì một tương lai Tươi sáng hơn.</p>
+
+            <p>Trong chặng đường phát triển của Tập đoàn, chúng tôi luôn luôn quan niệm rằng sự phát triển của mỗi Doanh
+                nghiệp đi đôi với trách nhiệm đối với Cộng đồng. Chính vì thế, chúng tôi luôn nêu cao tinh thần Tương
+                thân Tương ái, nỗ lực phấn đấu không ngừng nghỉ chỉ mong phụng sự được nhiều hơn nữa cho Cộng đồng.</p>
+
+            <p>CellGroup là một tập đoàn đa ngành với trọng tâm phát triển trong lĩnh vực làm đẹp, công nghệ và truyền
+                thông giải trí. Với triết lý kinh doanh đặt lợi ích khách hàng và cộng đồng lên hàng đầu, chúng tôi cam
+                kết mang đến những sản phẩm và dịch vụ chất lượng cao, góp phần nâng cao chất lượng cuộc sống của người
+                Việt Nam.</p>
+
+            <p><strong>CellMoon's</strong> - thương hiệu mỹ phẩm trực thuộc CellGroup - là một trong những thương hiệu
+                tiên phong trong việc phát triển các dòng sản phẩm chăm sóc da thiên nhiên, an toàn và hiệu quả. Với tầm
+                nhìn trở thành thương hiệu mỹ phẩm hàng đầu Việt Nam và vươn ra quốc tế, chúng tôi đã và đang phát triển
+                những dòng sản phẩm đột phá, đáp ứng nhu cầu ngày càng cao của khách hàng.</p>
+
+            <p>Sứ mệnh của CellGroup là không chỉ kinh doanh thành công mà còn hướng tới phát triển bền vững và mang lại
+                giá trị thiết thực cho xã hội. Chúng tôi nêu cao tinh thần trách nhiệm của mỗi cá nhân đối mới môi
+                trường, nguồn nước và Cellgroup tự hào với các hoạt động cộng đồng thông qua Quỹ Tấm Lòng Vàng, góp phần
+                bảo vệ môi trường và xây dựng một tương lai tươi sáng hơn cho mọi người.</p>
+
+            <p>Chúng tôi rất mong nhận được sự ủng hộ và hợp tác từ Quý Đối Tác và Quý Khách Hàng để cùng phát triển,
+                tạo dựng những giá trị bền vững và thành công vững chắc trong tương lai.</p>
+
+            <p style="text-align: right;"><strong>Trân trọng,<br>Tập đoàn CellGroup</strong></p>
+        </div>
+
+        <div class="text-content letter">
+            <h1>Tầm nhìn</h1>
+            <p>Cellgroup hướng đến là một tập đoàn kinh tế phát triển với đa ngành nghề, lĩnh vực khác nhau. </p>
+            <p>Trọng tâm là mảng làm đẹp, công nghệ, và truyền thông giải trí, hướng đến sự phát triển bền vững.</p>
+            <p> Phấn đấu trở thành một trong những doanh nghiệp dẫn đầu trong ngành làm đẹp, top 5 thương hiệu mỹ phẩm
+                Việt.</p>
+
+            <p>Trân trọng!</p>
+            <a href="#" class="btn">Liên hệ</a>
+        </div>
+
+        <div class="quote-section">
+            <div class="quote-content">
+                <div class="quote-text">
+                    <p class="quote-mark">“</p>
+                    <p class="quote-message">
+                        Sứ mệnh cộng đồng với chủ trương không ai bị bỏ lại phía sau,cải thiện cuộc sống cho mọi người
+                        và
+                        góp phần nâng tầm vị thế của đất nước.
+                    </p>
+                    <p class="quote-author">
+                        Ông Vương<br>
+                        Chủ tịch Hội đồng Quản trị
+                    </p>
+                </div>
+            </div>
+            <div class="quote-image">
+                <img src="sm_01.png" alt="Người phát biểu">
+            </div>
+        </div>
+
+        @* giá trị cốt lõi *@
+        <div class="core-values-section">
+            <div class="text-content">
+                <h1>Giá trị cốt lõi</h1>
+                <p>
+                    Uy tín - chất lượng - tận tình - chu đáo - niềm nở </p>
+                <div class="values-list">
+                    <div class="value-item">
+                        <h3>Uy tín</h3>
+                        <p>Uy tín làm nên thương hiệu</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Chất lượng</h3>
+                        <p>Chất lượng đến từng sản phẩm</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Tận tình</h3>
+                        <p>Đặt con người làm trung tâm trong mọi hành động</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Chu đáo</h3>
+                        <p>chu đáo trên từng dịch vụ</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Niềm nở</h3>
+                        <p>Luôn luôn giữ thái độ khiêm tốn, niềm nở với tất cả mọi người</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="image.png" alt="Giá trị cốt lõi" />
+            </div>
+        </div>
+
+    </div>
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2><span>Cell</span>group</h2>
+                            <p>Rất vui được đồng hành, hợp tác để cùng thực hiện sứ mệnh cao cả với quý đối tác.</p>
+                        </div>
+                    </div>
+                    @* <div class="col-sm-7">
+                    <div class="col-sm-3">
+                    <div class="video-gallery text-center">
+                    <a href="#">
+                    <div class="iframe-img">
+                    <img src="images/home/" alt="tonner" />
+                    </div>
+                    <div class="overlay-icon">
+                    <i class="fa fa-play-circle-o"></i>
+                    </div>
+                    </a>
+
+                    </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                    <div class="video-gallery text-center">
+                    <a href="#">
+                    <div class="iframe-img">
+                    <img src="images/home/" alt="tonner" />
+                    </div>
+                    <div class="overlay-icon">
+                    <i class="fa fa-play-circle-o"></i>
+                    </div>
+                    </a>
+
+                    </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                    <div class="video-gallery text-center">
+                    <a href="#">
+                    <div class="iframe-img">
+                    <img src="images/home/g" alt="tonner" />
+                    </div>
+                    <div class="overlay-icon">
+                    <i class="fa fa-play-circle-o"></i>
+                    </div>
+                    </a>
+
+                    </div>
+                    </div>
+
+
+                    </div> *@
+
+                </div>
+            </div>
+
+
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <p class="pull-left">© Bản quyền thuộc về cellgroup@gmail.com</p>
+
+                    </div>
+                </div>
+            </div>
+
+    </footer><!--/Footer-->
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+    <script src="~/js/price-range.js"></script>
+    <script src="~/js/jquery.prettyPhoto.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+
+</html>
